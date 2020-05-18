@@ -1,7 +1,12 @@
 <template>
-  <div>detail: {{ $route.params.itemId }}</div>
+  <div>detail: {{ itemId }}</div>
 </template>
 
 <script>
-export default {};
+export default {
+  name: 'DetailPage',
+  props: {
+    itemId: String,
+  },
+};
 </script>

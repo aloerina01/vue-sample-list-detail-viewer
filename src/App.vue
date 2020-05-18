@@ -1,23 +1,21 @@
 <template>
   <div id="app">
-     <router-view></router-view>
+    <global-header />
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld";
-
+import GlobalHeader from './components/GlobalHeader';
 export default {
-  name: "App",
-  components: {
-    HelloWorld
-  }
+  name: 'App',
+  components: { GlobalHeader },
 };
 </script>
 
 <style>
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
