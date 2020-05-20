@@ -6,7 +6,7 @@
     "node": true
   },
   "plugins": ["prettier"],
-  "parser": "eslint-babel",
+  "parser": "babel-eslint",
   "parserOptions": {
     "version": 2018,
     "sourceType": "module"
@@ -14,7 +14,7 @@
   "rules": {
     "no-unused-vars": "warn"
   },
-  "override": [
+  "overrides": [
     {
       "files": ["*.vue"],
       "extends": ["plugin:vue/recommended"],
