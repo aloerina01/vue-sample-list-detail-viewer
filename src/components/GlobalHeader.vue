@@ -9,11 +9,11 @@ import { PageMetaStoreQuery } from '../queries';
 
 export default {
   name: 'GlobalHeader',
-  mounted() {},
   computed: {
     pageTitle() {
       return PageMetaStoreQuery.pageTitle;
     },
   },
+  mounted() {},
 };
 </script>
