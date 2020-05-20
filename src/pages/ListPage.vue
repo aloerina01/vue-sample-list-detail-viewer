@@ -2,7 +2,13 @@
   <div>
     <input v-model="filterQuery" />
     <ul>
-      <li v-for="item in items" :key="item.id">{{ item.title }}</li>
+      <li
+        v-for="item in items"
+        :key="item.id"
+        @click.prevent.stop="clickItem(item.id)"
+      >
+        {{ item.title }}
+      </li>
     </ul>
     <button @click.prevent.stop="clickAddButton">Add</button>
   </div>
@@ -39,6 +45,9 @@ export default {
     },
     clickAddButton() {
       addListItem('6', '6');
+    },
+    clickItem(itemId) {
+      this.$router.push(`/{itemId}`);
     },
   },
 };
