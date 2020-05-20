@@ -1,28 +1,23 @@
 {
-  "extends": ["eslint:recommended", "plugin:prettier/recommended"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:vue/recommended",
+    "plugin:prettier/recommended"
+  ],
   "env": {
     "es6": true,
     "browser": true,
     "node": true
   },
-  "plugins": ["prettier"],
-  "parser": "babel-eslint",
+  "plugins": ["vue"],
+  "parser": "vue-eslint-parser",
   "parserOptions": {
-    "version": 2018,
-    "sourceType": "module"
+    "parser": "babel-eslint"
   },
   "rules": {
-    "no-unused-vars": "warn"
-  },
-  "overrides": [
-    {
-      "files": ["*.vue"],
-      "extends": ["plugin:vue/recommended"],
-      "plugins": ["vue"],
-      "parser": "vue-eslint-parser",
-      "parserOptions": {
-        "parser": "babel-eslint"
-      }
-    }
-  ]
+    "no-unused-vars": "warn",
+    "vue/html-self-closing": "off",
+    "vue/singleline-html-element-content-newline": "off",
+    "vue/component-tags-order": "off"
+  }
 }

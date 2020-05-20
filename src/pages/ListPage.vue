@@ -25,12 +25,6 @@ export default {
       filterQuery: '',
     };
   },
-  created() {
-    fetchListItems();
-  },
-  mounted() {
-    loadNewPage('リスト一覧');
-  },
   computed: {
     items() {
       return ItemsStoreQuery.items;
@@ -38,6 +32,12 @@ export default {
   },
   watch: {
     filterQuery() {},
+  },
+  created() {
+    fetchListItems();
+  },
+  mounted() {
+    loadNewPage('リスト一覧');
   },
   methods: {
     clearQuery() {
