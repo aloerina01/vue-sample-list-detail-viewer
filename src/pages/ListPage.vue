@@ -1,21 +1,21 @@
 <template>
-  <div>
+  <div class="page-wrapper">
     <input v-model="filterQuery" />
-    <ul>
+    <ul class="feed-list">
       <li
         v-for="item in items"
         :key="item.id"
+        class="feed-list-item"
         @click.prevent.stop="clickItem(item.id)"
       >
         {{ item.title }}
       </li>
     </ul>
-    <button @click.prevent.stop="clickAddButton">Add</button>
   </div>
 </template>
 
 <script>
-import { fetchListItems, loadNewPage, addListItem } from '../commands';
+import { Commands, loadNewPage } from '../commands';
 import { ItemsStoreQuery } from '../queries';
 
 export default {
@@ -34,7 +34,7 @@ export default {
     filterQuery() {},
   },
   created() {
-    fetchListItems();
+    Commands.fetchNewFeed();
   },
   mounted() {
     loadNewPage('リスト一覧');
@@ -42,9 +42,6 @@ export default {
   methods: {
     clearQuery() {
       this.filterQuery = '';
-    },
-    clickAddButton() {
-      addListItem('6', '6');
     },
     clickItem(itemId) {
       this.$router.push(`/{itemId}`);
@@ -54,7 +51,19 @@ export default {
 </script>
 
 <style lang="scss">
-ul {
+.feed-list {
   list-style: none;
+  &-item {
+    text-align: left;
+    padding: 8px 16px;
+    border-top: 1px solid #e8e8e8;
+    &:first-child {
+      border-top: 0px;
+    }
+  }
+}
+.page-wrapper {
+  overflow-y: scroll;
+  height: inherit;
 }
 </style>
