@@ -1,6 +1,6 @@
 <template>
   <header>
-    <div>pageTitle: {{ pageTitle }}</div>
+    <div>{{ pageTitle }}</div>
   </header>
 </template>
 
@@ -17,3 +17,14 @@ export default {
   mounted() {},
 };
 </script>
+
+<style lang="scss" scoped>
+header {
+  display: flex;
+  align-items: center;
+  padding: 16px 28px;
+  background-color: #1976d2;
+  color: #fff;
+  font-weight: 700;
+}
+</style>
