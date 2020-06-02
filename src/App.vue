@@ -23,11 +23,9 @@ export default {
   text-align: center;
   display: block;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin-top: 5vh;
   width: 100%;
-  height: 85%;
+  height: 90vh;
   background-color: #fff;
   box-shadow: 1px 1px 10px #e8e8e8;
   border-radius: 16px;

@@ -18,3 +18,7 @@ Vue + Vuex の設計パターン検証のためのサンプルプロジェクト
 - Store を更新するときは、 dispatch 関数を通じて Flux 的に更新する(すべての Store に ActionType を通知する)
 - dispatch 関数を呼び出す処理は、ビジネスロジック層である Command にて行う
 - Component は Query を通じてデータを取得し表示し、 Command を通じて処理を行い Store を更新する
+
+### 借り物
+
+- Icons made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
