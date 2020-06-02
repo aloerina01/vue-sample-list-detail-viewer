@@ -94,10 +94,7 @@ export default {
     text-decoration: none;
     color: #444;
     padding: 8px 16px;
-    border-top: 1px solid #e8e8e8;
-    &:first-child {
-      border-top: 0px;
-    }
+    border-bottom: 1px solid #e8e8e8;
   }
 }
 .no-feed-list {

@@ -1,5 +1,5 @@
 <template>
-  <div>{{ displayItem }}</div>
+  <div v-html="displayItem['content:encoded']"></div>
 </template>
 
 <script>
