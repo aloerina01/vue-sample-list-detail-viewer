@@ -38,6 +38,7 @@ export default {
     top: 0;
     left: 0;
     transform: none;
+    margin-top: 0;
   }
 }
 </style>

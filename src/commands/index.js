@@ -2,7 +2,7 @@ import { dispatch } from '../dispatcher';
 import { ActionTypes } from '../const/ActionTypes';
 
 import { fetchNewFeed } from './fetchNewFeed';
-import { updatePageMeta } from './renderNextPage';
+import { updatePageMeta } from './updatePageMeta';
 
 export const Commands = {
   fetchNewFeed,
