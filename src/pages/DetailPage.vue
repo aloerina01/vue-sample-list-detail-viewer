@@ -11,16 +11,27 @@ export default {
   props: {
     itemId: String,
   },
-  computed: {
-    displayItem() {
-      return ItemsStoreQuery.findItemById(this.itemId);
-    },
+  data() {
+    return {
+      displayItem: null,
+    };
+  },
+  created() {
+    this.displayItem = ItemsStoreQuery.findItemById(this.itemId);
   },
   mounted() {
-    Commands.updatePageMeta(`Detail - ${this.displayItem.title}`);
+    Commands.updatePageMeta(
+      `${
+        this.displayItem ? this.displayItem.title : '表示できるものがありません'
+      }`
+    );
   },
   updated() {
-    Commands.updatePageMeta(`Detail - ${this.displayItem.title}`);
+    Commands.updatePageMeta(
+      `${
+        this.displayItem ? this.displayItem.title : '表示できるものがありません'
+      }`
+    );
   },
 };
 </script>

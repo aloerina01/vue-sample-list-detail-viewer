@@ -1,6 +1,6 @@
 <template>
   <header>
-    <div>{{ pageTitle }}</div>
+    <div class="title-label">{{ pageTitle }}</div>
   </header>
 </template>
 
@@ -26,5 +26,10 @@ header {
   background-color: #1976d2;
   color: #fff;
   font-weight: 700;
+  .title-label {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
 }
 </style>

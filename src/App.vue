@@ -39,6 +39,7 @@ export default {
     left: 0;
     transform: none;
     margin-top: 0;
+    height: 100vh;
   }
 }
 </style>
